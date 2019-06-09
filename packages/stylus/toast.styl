@@ -3,8 +3,8 @@
 .om-toast
     top 0
     left 0
-    // width 100vw
-    // height 100vh
+    width 100vw
+    height 100vh
     position fixed 
     z-index 9999
     display flex
@@ -12,6 +12,7 @@
     justify-content center
     opacity 1
     animation fade 200ms 
+    pointer-events none
     &--mask
         width: 100%
         height 100%
@@ -19,6 +20,7 @@
         opacity 0
         z-index 10000
         position: absolute
+        pointer-events all
     &--body
         z-index 10001
         margin: 0 auto
@@ -26,8 +28,6 @@
         position: relative
         background-color: rgba(0,0,0,0.8)
         color white
-        transform: translate(375rem,375rem)
-        transform-origin: 50%
         width: 225.938rem
     &--img
         width: 105.906rem 

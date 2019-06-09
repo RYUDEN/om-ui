@@ -20,7 +20,7 @@ export default {
     },
     mounted(){
         setTimeout(()=>{
-            //this.close()
+            this.close()
         },this.duration)
     },
     methods:{

@@ -96,18 +96,6 @@
       @click="Toaston"
       >打开toast提示吧</OMButton>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
   </div>
 </template>
 
@@ -162,7 +150,8 @@ export default {
     Toaston(){
       this.$toast({
         value:'toast轻提示',
-        icon:'smile'
+        icon:'smile',
+        mask:true
       })
     }
   }
