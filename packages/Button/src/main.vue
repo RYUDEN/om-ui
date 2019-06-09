@@ -1,4 +1,5 @@
 <script>
+import Loading from '../../Loading/src/main'
 export default {
     name:'OMButton',
     props:{
@@ -17,6 +18,9 @@ export default {
       handleClick(evt){
          this.$emit('click', evt);
       }
+    },
+    components:{
+      Loading
     }
 }
 </script>
@@ -38,9 +42,10 @@ export default {
       ]"
     >
       
-        <span  class="loading-ico iconfont icon-sync"  v-if="loading">
+        <!-- <span  class="loading-ico iconfont icon-sync"  >
           
-        </span>
+        </span> -->
+        <Loading v-if="loading" :size='size' :dark="outline"/>
       <!-- <img src="spinnerr.svg" alt=""> -->
       <span v-if="$slots.default"><slot></slot></span>
     </button>

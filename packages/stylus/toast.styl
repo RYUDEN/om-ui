@@ -1,0 +1,57 @@
+@import './base'
+@import './transition.styl';
+.om-toast
+    top 0
+    left 0
+    // width 100vw
+    // height 100vh
+    position fixed 
+    z-index 9999
+    display flex
+    flex-direction column
+    justify-content center
+    opacity 1
+    animation fade 200ms 
+    &--mask
+        width: 100%
+        height 100%
+        background #fff
+        opacity 0
+        z-index 10000
+        position: absolute
+    &--body
+        z-index 10001
+        margin: 0 auto
+        padding: 21.058rem 28.246rem
+        position: relative
+        background-color: rgba(0,0,0,0.8)
+        color white
+        transform: translate(375rem,375rem)
+        transform-origin: 50%
+        width: 225.938rem
+    &--img
+        width: 105.906rem 
+        height: 105.906rem 
+        text-align: center
+        margin: 0 auto
+        .iconfont 
+            font-size: 100rem
+    &--content
+        width: 100%
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin: 10rem 0
+        text-align: center
+.fade-enter-active,.fade-leave-active
+    transition: $fade-linear-transition
+.fade-enter,.fade-leave-to
+    opacity 0
+@keyframes fade {
+    from {
+        opacity 0
+    }
+    to{
+        opacity 1
+    }
+}

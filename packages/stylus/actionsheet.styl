@@ -1,0 +1,61 @@
+@import './transition.styl'
+.om-action-sheet
+    top 0
+    left 0
+    width 100vw
+    height 100vh
+    position fixed 
+    z-index 9999
+    opacity 1
+    &--container
+        width 100%
+        position absolute
+        bottom 0
+        z-index: 10001
+        background-color #f0f7f9
+    &--title
+        position relative
+        padding 21.184rem
+        background-color: #fff
+        text-align: center
+        color: #b2b2b2
+    &--body
+        text-align: center
+        margin-bottom: 10.562rem
+    &--item
+        padding 21.184rem
+        transition: background-color .3s;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        position: relative;
+        background-color #fff
+    &--title::after,&--item::after
+        border: 0 solid #d6e4ef;
+        transform: scale(.5);
+        border-bottom-width: 1PX;
+        top: -50%;
+        left: -50%;
+        right: -50%;
+        bottom: -50%;
+        content: "";
+        position: absolute;
+        transform-origin: center;
+        box-sizing: border-box;
+        pointer-events: none;
+    &--cancel
+        padding 21.184rem
+        background-color: #fff
+        text-align: center
+.slide-enter-active
+    transition:$--all-transition
+    .om-action-sheet--container
+        transition:$--slide-transition
+.slide-leave-active
+    transition:$--all-transition
+    .om-action-sheet--container
+        transition:$--all-transition       
+.slide-enter,.slide-leave-to
+    opacity 0
+    .om-action-sheet--container
+        bottom: -100%

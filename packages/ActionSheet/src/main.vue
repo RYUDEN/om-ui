@@ -1,0 +1,45 @@
+<script>
+export default {
+    name:'ActionSheet',
+    props:{
+        title:String,
+        cancelText:String,
+        status:Boolean
+    },
+    methods:{
+        handleClose(e){
+            this.$emit('close',e)
+        }
+    }
+}
+</script>
+<template>
+<transition name="slide">
+    <div 
+    class="om-action-sheet"
+    v-if="status"
+    >
+        <div
+        class="om-mask"
+        @click="handleClose"
+        ></div>
+        <div 
+        class="om-action-sheet--container"
+        >
+            <div
+            v-if="title"
+            class="om-action-sheet--title"
+            >{{title}}</div>
+            <div v-if="$slots.default"
+                class="om-action-sheet--body"
+            >
+                <slot></slot>
+            </div>
+            <div
+            class="om-action-sheet--cancel"
+            @click="handleClose"
+            >{{cancelText?cancelText:'取消'}}</div>
+        </div>
+</div>
+</transition>
+</template>

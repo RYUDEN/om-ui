@@ -1,0 +1,72 @@
+@import './base'
+@import './transition.styl';
+.em-modal
+    top 0
+    left 0
+    width 100vw
+    height 100vh
+    position fixed 
+    z-index 9999
+    display flex
+    flex-direction column
+    justify-content center
+    opacity 1
+    animation fade 200ms 
+    &--container
+        position relative
+        width: 600rem
+        max-height: 700rem
+        overflow auto
+        margin: 0 auto 
+        background-color #fff
+        text-align: center
+        border-radius: 10.592rem
+        z-index: 10001
+    &--header
+        line-height: 2.5
+        text-align: center
+        position relative
+        &::after 
+            top: auto;
+            bottom: 0;
+            border-bottom: 1PX solid #e5e5e5;
+    &--body 
+        padding 28.246rem 21.184rem
+        text-align: left 
+        word-break: break-all
+        text-indent: 2em
+    &--footer
+        display: flex 
+        position relative
+        &::before 
+            top: 0;
+            bottom: auto;
+            border-top: 1PX solid #e5e5e5;
+        &__btn 
+            flex 1
+            line-height: 2.5
+            &:active 
+                opacity 0.6
+            &.confirm
+                color $color-primary
+    &--header::after,&--footer::before
+        content: "";
+        position: absolute;
+        transform-origin: center;
+        box-sizing: border-box;
+        pointer-events: none;
+        left: 0;
+        right: 0;
+        transform: scaleY(.5);
+.fade-enter-active,.fade-leave-active
+    transition: $fade-linear-transition
+.fade-enter,.fade-leave-to
+    opacity 0
+@keyframes fade {
+    from {
+        opacity 0
+    }
+    to{
+        opacity 1
+    }
+}

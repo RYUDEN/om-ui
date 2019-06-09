@@ -1,41 +1,34 @@
 //-----------iconfont---------------
 @import './icon/iconfont.css'
 //-----------common默认属性---------------
+@import './base.styl'
 @import './button.styl'
 @import './curtain.styl'
-@import './base.styl'
+@import './badge.styl'
+@import './loadmore.styl'
+@import './loading.styl'
+@import './actionsheet.styl'
+@import './modal.styl'
+@import './toast.styl'
+@import './transition.styl';
 
 html 
     font-size: (100/750)vw
-p,div,a,i,h1,h2,h3,h4,.iconfont
+
+p,div,a,i,h1,h2,h3,h4,.iconfont,span
     font-size: $font-size-base
     box-sizing: border-box
+span 
+    display: inline-block
 .om-mask
     width: 100%
     height 100%
     background #000
     opacity .3
-    z-index 100
+    z-index 10000
     position: absolute
-.fade__close
-    animation: hide 
-    animation-duration: .3s
-.fade__show
-    animation: show 
-    animation-duration: .3s
-@keyframes hide {
-    from{
-        opacity 1
-    }
-    to{
-        opacity 0
-    }
-}
-@keyframes show {
-    from{
-        opacity 0
-    }
-    to{
-        opacity 1
-    }
-}
+.fade-enter-active,.fade-leave-active
+    transition: $fade-linear-transition
+.fade-enter,.fade-leave-to
+    opacity 0
+
