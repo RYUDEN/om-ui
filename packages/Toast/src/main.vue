@@ -46,7 +46,7 @@ export default {
             <div 
              class="om-toast--mask"
              v-if="mask"
-             @touchmove.prevent.stop="masktouch"
+             @touchmove.prevent="masktouch"
             ></div>
             <div class="om-toast--body">
                 <div class="om-toast--img" v-if="icon">

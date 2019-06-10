@@ -165,12 +165,12 @@ body
   padding 0
 .demo 
   height 5px 
-  width 750rem 
+  width 7.50rem 
   background-color #000
 .ac
   text-align center
   &.lg 
-    font-size 50rem
+    font-size .50rem
 .container
-  padding 10rem
+  padding .10rem
 </style>
