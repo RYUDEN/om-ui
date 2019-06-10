@@ -5,11 +5,14 @@ import App from './App'
 import Icon from '../packages/Icon'
 import Omui from '../src/index'
 import '../packages/stylus/common.styl'
+import router from './router'
+
 Vue.config.productionTip = false
 Vue.use(Omui)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  router,
   components: { App },
   template: '<App/>'
 })
