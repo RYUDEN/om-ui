@@ -10,13 +10,14 @@
       <router-link to='badge' class="link">徽标</router-link>
       <router-link to='loadmore' class="link">加载更多</router-link>
       <router-link to='curtain' class="link">幕帘</router-link>
+      <router-link to='tag' class="link">标签</router-link>
     </div>
     <div class="container index-container">
       <p class="title">操作反馈:</p>
       <router-link to='action' class="link">动作面板</router-link>
       <router-link to='modal' class="link">模态框</router-link>
       <router-link to='toast' class="link">轻提示</router-link>
-
+      <router-link to='message' class="link">消息提示</router-link>
     </div>
   </div>
 </template>

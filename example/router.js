@@ -12,6 +12,9 @@ const loadmore = ()=>import('./pages/loadmore');
 const action = ()=>import('./pages/action');
 const modal = ()=>import('./pages/modal');
 const toast = ()=>import('./pages/toast');
+const tag = ()=>import('./pages/tag');
+const message = ()=>import('./pages/message');
+
 export default new Router({
     mode:'hash',
     scrollBehavior(to, from, savedPosition) {
@@ -57,6 +60,16 @@ export default new Router({
             path:'/modal',
             name:'modal',
             component:modal
+        },
+        {
+            path:'/tag',
+            name:'tag',
+            component:tag
+        },
+        {
+            path:'/message',
+            name:'message',
+            component:message
         },
     ]
 })

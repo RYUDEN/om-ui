@@ -1,0 +1,34 @@
+@import './base.styl'
+@import './transition.styl'
+.om-message
+    width: 100%
+    height .5rem
+    line-height: .5rem
+    text-align: center
+    position: fixed;
+    transform: translateY(0)
+    top 0 
+    background-color $color-primary
+    color #fff
+    animation: slidein .3s 
+    animation-timing-function: all cubic-bezier(.36,.66,.04,1) 300ms
+    &__error 
+        background-color $color-danger
+    &__warn
+        background-color $color-warning
+    &__success 
+        background-color $color-success
+.Slide-down-enter,.Slide-down-leave-to 
+    top: -100%
+.Slide-down-enter-active,.Slide-down-leave-active
+    transition: $--all-transition
+.Slide-down-enter-to,.Slide-down-leave
+    top: 0
+@keyframes slidein {
+    from {
+        top: -100%
+    }
+    to{
+        top 0 
+    }
+}

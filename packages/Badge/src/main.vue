@@ -19,7 +19,7 @@ export default {
             let max   = this.max
             let min   = this.min 
             if(value>max){
-                return '· · ·'
+                return max+'+'
             }else if(value<min){
                 return false 
             }else{

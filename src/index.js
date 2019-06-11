@@ -7,6 +7,8 @@ import Loadmore from '../packages/Loadmore/index'
 import {ActionSheet,ActionSheetItem} from '../packages/ActionSheet/index'
 import Modal from '../packages/Modal/index'
 import Toast from '../packages/Toast/index'
+import Tag from '../packages/Tag/index'
+import Message from '../packages/Message/index'
 
 const components = [
     Icon,
@@ -16,14 +18,16 @@ const components = [
     Loading,
     Loadmore,
     ActionSheet,
-    ActionSheetItem
+    ActionSheetItem,
+    Tag
 ]
 const install = function(Vue){
     components.forEach(component=>{
         Vue.component(component.name,component)
     })
-    Vue.prototype.$modal = Modal
-    Vue.prototype.$toast = Toast
+    Vue.prototype.$modal   = Modal
+    Vue.prototype.$toast   = Toast
+    Vue.prototype.$message = Message
 }
 if (typeof window !== 'undefined' && window.Vue) {
     install(window.Vue);
@@ -39,5 +43,7 @@ export default {
     ActionSheet,
     ActionSheetItem,
     Modal,
+    Tag,
+    Message,
     install
 }

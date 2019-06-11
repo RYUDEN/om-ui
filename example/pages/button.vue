@@ -25,6 +25,7 @@
       <p></p>
       <OMButton
         full
+        @click="showMsg"
       >block展示</OMButton>
       <p></p>
       <OMButton
@@ -56,7 +57,7 @@
 <script>
 
 export default {
-  name: 'button',
+  name: 'Button',
   data(){
     return{
       Curtainshow:false,
@@ -71,6 +72,12 @@ export default {
     }
   },
   methods:{
+    showMsg(){
+      this.$message({
+        value:'message',
+        icon:'smile'
+      })
+    },
     curtainClose(){
       this.Curtainshow = false
     },

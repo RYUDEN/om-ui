@@ -2,35 +2,31 @@ import Vue from 'vue'
 import Main from './main.vue'
 import {isVNode}  from '../../../utils/vdom'
 
-let ToastConstructor = Vue.extend(Main);
+let MessageConstructor = Vue.extend(Main);
 
 let vnode;
 
-const Toast  = function(options){
+const Message = function(options){
     options = options || {};
     if (typeof options === 'string') {
         options = {
-            content: options
+            value: options
         };
     }
     let userOnCancel = options.onCancel;
     options.onCancel = function() {
-        Toast.close(userOnCancel);
+        Message.close(userOnCancel);
     };
-    vnode = new ToastConstructor({
+    vnode = new MessageConstructor({
         data: options
     })
-    if (isVNode(vnode.content)) {
-        vnode.$slots.default = [vnode.content];
-        vnode.content = null;
-    }
     vnode.visible = true;
     vnode.$mount();
     document.body.appendChild(vnode.$el);
     return vnode 
 }
-Toast.close = function(userOnCancel){
+Message.close = function(userOnCancel){
     userOnCancel(vnode)
 }
 
-export default Toast
+export default Message
