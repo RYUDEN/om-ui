@@ -32,9 +32,21 @@ export default {
 <template>
     <div class="om-swiper">
         <div class="om-swiper-wrapper">
-            <div class="om-swiper-item">red</div>
-            <div class="om-swiper-item">blue</div>
-            <div class="om-swiper-item">yellow</div>
+            <div class="om-swiper-item">
+                <div 
+                class="om-swiper-content"
+                >red</div>
+            </div>
+            <div class="om-swiper-item">
+                <div 
+                class="om-swiper-content"
+                >blue</div>
+            </div>
+            <div class="om-swiper-item">
+                <div 
+                class="om-swiper-content"
+                >yellow</div>
+            </div>
         </div>
     </div>
 </template>

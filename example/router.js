@@ -14,6 +14,8 @@ const modal = ()=>import('./pages/modal');
 const toast = ()=>import('./pages/toast');
 const tag = ()=>import('./pages/tag');
 const message = ()=>import('./pages/message');
+const swiper = ()=>import('./pages/swiper');
+
 
 export default new Router({
     mode:'hash',
@@ -71,5 +73,10 @@ export default new Router({
             name:'message',
             component:message
         },
+        {
+            path:'/swiper',
+            name:'swiper',
+            component:swiper
+        }
     ]
 })
