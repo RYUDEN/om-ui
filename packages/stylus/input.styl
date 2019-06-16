@@ -1,0 +1,35 @@
+.om-input
+    position relative
+    margin-left .28rem 
+    padding .21rem 0 
+    display flex 
+    line-height: 1.6
+    &::after 
+        content: "";
+        position: absolute;
+        transform-origin: center;
+        box-sizing: border-box;
+        pointer-events: none;
+        top: -50%;
+        left: -50%;
+        right: -50%;
+        bottom: -50%;
+        border: 0 solid #d6e4ef;
+        transform: scale(.5);
+        border-bottom-width: 1PX;
+    &__title
+        margin-right .14rem
+        width 1.5rem 
+        line-height: 1.6
+    &--main 
+        flex 1 
+        display flex 
+        &__error
+            color red
+            position: absolute
+        &__main 
+            flex 1 
+            border none 
+            outline none 
+        &__clear 
+            margin-right .09rem

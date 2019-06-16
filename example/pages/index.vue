@@ -21,6 +21,11 @@
       <router-link to='toast' class="link">轻提示</router-link>
       <router-link to='message' class="link">消息提示</router-link>
     </div>
+    <div class="container index-container">
+      <p class="title">表单组件</p>
+      <router-link to='ominput' class="link">输入框</router-link>
+
+    </div>
   </div>
 </template>
 

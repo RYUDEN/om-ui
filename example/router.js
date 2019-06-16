@@ -17,6 +17,7 @@ const message = ()=>import('./pages/message');
 const swiper = ()=>import('./pages/swiper');
 const divider = ()=>import('./pages/divider');
 const omInput = ()=>import('./pages/ominput');
+const slider = ()=>import('./pages/slider');
 
 
 export default new Router({
@@ -89,6 +90,11 @@ export default new Router({
             path:'/omInput',
             name:'omInput',
             component:omInput
+        },
+        {
+            path:'/slider',
+            name:'slider',
+            component:slider
         },
     ]
 })

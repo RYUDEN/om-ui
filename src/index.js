@@ -12,6 +12,7 @@ import Message from '../packages/Message/index'
 import {Swiper,SwiperItem} from '../packages/Swiper/index'
 import Divider from '../packages/Divider/index'
 import Input from '../packages/Input/index'
+import Slider from '../packages/Slider/index'
 
 
 const components = [
@@ -27,7 +28,8 @@ const components = [
     Swiper,
     SwiperItem,
     Divider,
-    Input
+    Input,
+    Slider
 ]
 const install = function(Vue){
     components.forEach(component=>{
@@ -57,5 +59,6 @@ export default {
     SwiperItem,
     Divider,
     Input,
+    Slider,
     install
 }
