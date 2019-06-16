@@ -4,7 +4,7 @@
         <EmTag
         class="tags"
         v-for="(i,k) in tags"
-        :key="k"
+        :key="`outline_${k}`"
         :checked="i.checked"
         :value="i.value"
         @click="handleClick(k)"
@@ -13,17 +13,17 @@
         <EmTag
         class="tags"
         v-for="(i,k) in tags"
-        :key="k"
+        :key="`cycle_${k}`"
         :checked="i.checked"
         :value="i.value"
-        cicle
+        cycle
         @click="handleClick(k)"
         />
         <p>tags标签 primary</p>
         <EmTag
         class="tags"
         v-for="(i,k) in tags"
-        :key="k"
+        :key="`primary_${k}`"
         :checked="i.checked"
         :value="i.value"
         primary

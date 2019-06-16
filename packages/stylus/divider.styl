@@ -1,0 +1,26 @@
+@import './base'
+.om-divider
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: .5rem;
+    font-size: .24rem;
+    text-align: center;
+    &__content 
+        display: inline-block;
+        position: relative;
+        padding: 0 .25rem;
+        color: $color-primary;
+        font-size: .24rem;;
+        background: #fff;
+        z-index: 101;
+    &__line
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1PX;
+        background-color: #ccc;
+        z-index: 100;

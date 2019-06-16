@@ -9,7 +9,10 @@ import Modal from '../packages/Modal/index'
 import Toast from '../packages/Toast/index'
 import Tag from '../packages/Tag/index'
 import Message from '../packages/Message/index'
-import Swiper from '../packages/Swiper/index'
+import {Swiper,SwiperItem} from '../packages/Swiper/index'
+import Divider from '../packages/Divider/index'
+import Input from '../packages/Input/index'
+
 
 const components = [
     Icon,
@@ -21,7 +24,10 @@ const components = [
     ActionSheet,
     ActionSheetItem,
     Tag,
-    Swiper
+    Swiper,
+    SwiperItem,
+    Divider,
+    Input
 ]
 const install = function(Vue){
     components.forEach(component=>{
@@ -48,5 +54,8 @@ export default {
     Tag,
     Message,
     Swiper,
+    SwiperItem,
+    Divider,
+    Input,
     install
 }

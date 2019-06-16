@@ -22,7 +22,7 @@ export default {
                 return max+'+'
             }else if(value<min){
                 return false 
-            }else{
+            }else {
                 return this.value
             }
 

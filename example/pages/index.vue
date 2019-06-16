@@ -11,6 +11,8 @@
       <router-link to='loadmore' class="link">加载更多</router-link>
       <router-link to='curtain' class="link">幕帘</router-link>
       <router-link to='tag' class="link">标签</router-link>
+      <router-link to='swiper' class="link">swiper</router-link>
+      <router-link to='divider' class="link">分割线</router-link>
     </div>
     <div class="container index-container">
       <p class="title">操作反馈:</p>

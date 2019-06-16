@@ -15,6 +15,8 @@ const toast = ()=>import('./pages/toast');
 const tag = ()=>import('./pages/tag');
 const message = ()=>import('./pages/message');
 const swiper = ()=>import('./pages/swiper');
+const divider = ()=>import('./pages/divider');
+const omInput = ()=>import('./pages/ominput');
 
 
 export default new Router({
@@ -77,6 +79,16 @@ export default new Router({
             path:'/swiper',
             name:'swiper',
             component:swiper
-        }
+        },
+        {
+            path:'/divider',
+            name:'divider',
+            component:divider
+        },
+        {
+            path:'/omInput',
+            name:'omInput',
+            component:omInput
+        },
     ]
 })

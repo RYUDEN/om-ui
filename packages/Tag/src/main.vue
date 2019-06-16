@@ -4,7 +4,7 @@ export default {
     props:{
         value:String,
         checked:Boolean,
-        cicle:Boolean, //圆角
+        cycle:Boolean, //圆角
         primary:Boolean //实心标签
     },
     methods:{
@@ -20,7 +20,7 @@ export default {
     :class="[
         'em-tag',
         checked?'em-tag__checked':'',
-        cicle?'em-tag__cicle':'',
+        cycle?'em-tag__cycle':'',
         primary?'em-tag__primary':'',
     ]"
     >{{value}}</span>
