@@ -110,9 +110,9 @@ export default {
             transform:transform,
             transition:transformDur
         }"
-        @touchstart="handleStart"
-        @touchmove="hanldeMove"
-        @touchend="handleEnd"
+        @touchstart.stop="handleStart"
+        @touchmove.stop="hanldeMove"
+        @touchend.stop="handleEnd"
         >
             <slot></slot>
         </div>

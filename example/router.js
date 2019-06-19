@@ -18,6 +18,7 @@ const swiper = ()=>import('./pages/swiper');
 const divider = ()=>import('./pages/divider');
 const omInput = ()=>import('./pages/ominput');
 const slider = ()=>import('./pages/slider');
+const tabs = ()=>import('./pages/tabs');
 
 
 export default new Router({
@@ -95,6 +96,11 @@ export default new Router({
             path:'/slider',
             name:'slider',
             component:slider
+        },
+        {
+            path:'/tabs',
+            name:'tabs',
+            component:tabs
         },
     ]
 })

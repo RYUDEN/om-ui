@@ -1,0 +1,34 @@
+@import './transition.styl'
+.om-tabs
+    position relative
+    &-switch
+        height .8rem
+        width 100%
+        overflow scroll
+        &-container 
+            height .8rem
+            display flex 
+        &-item 
+            min-width 1rem
+            line-height .8rem 
+            text-align center
+            transition $--all-transition
+            padding 0 .2rem
+            &__active
+                font-size: .28rem
+                font-weight bold
+.om-pane-view
+    overflow hidden
+    width 100%
+    min-height: 200px
+    .om-pane-group
+        display: flex;
+        position relative
+        transition:$--all-transition
+        width: 100%;
+        overflow: visible;
+        will-change: transform,left,top;
+        height 100%
+.om-tab-pane
+    width: 100%;
+    display: inline-block

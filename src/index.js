@@ -13,6 +13,7 @@ import {Swiper,SwiperItem} from '../packages/Swiper/index'
 import Divider from '../packages/Divider/index'
 import Input from '../packages/Input/index'
 import Slider from '../packages/Slider/index'
+import {Tabs,Tabpane} from '../packages/Tabs/index'
 
 
 const components = [
@@ -29,7 +30,9 @@ const components = [
     SwiperItem,
     Divider,
     Input,
-    Slider
+    Slider,
+    Tabs,
+    Tabpane
 ]
 const install = function(Vue){
     components.forEach(component=>{
@@ -60,5 +63,7 @@ export default {
     Divider,
     Input,
     Slider,
+    Tabs,
+    Tabpane,
     install
 }
