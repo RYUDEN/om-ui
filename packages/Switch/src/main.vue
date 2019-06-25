@@ -1,0 +1,21 @@
+<script>
+export default {
+    name:'OMSwitch',
+    props:{
+        checked:Boolean
+    },
+    methods:{
+        handleInput(e){
+            this.$emit('input',e.target.checked)
+        }
+    }
+}
+</script>
+<template>
+    <input 
+    type="checkbox" 
+    :checked="checked" 
+    class="om-switch"
+    @change="handleInput"
+    />
+</template>

@@ -1,0 +1,64 @@
+<script>
+export default {
+    name:'picker',
+    data(){
+        return {
+            list:[
+                {
+                    label:'第一',
+                    value:0
+                },
+                {
+                    label:'第二',
+                    value:1
+                },
+                {
+                    label:'第三',
+                    value:2
+                },
+                {
+                    label:'第四',
+                    value:3
+                },
+                {
+                    label:'第五',
+                    value:4
+                },
+                {
+                    label:'第六',
+                    value:5
+                },
+                {
+                    label:'第七',
+                    value:6
+                },
+                {
+                    label:'第八',
+                    value:7
+                }
+            ]
+        }
+    },
+    methods:{
+        handleChange(e){
+            this.$modal({
+                title:'改变了！',
+                content: `<p>选中label为：${e.label}<p><p>选中value为:${e.value}<p>`,
+                UseHTMLString:true,
+                onCancel:()=>{console.log('取消了')},
+                onConfirm:()=>{console.log('确认了')}
+            })
+        }
+    }
+}
+</script>
+<template>
+    <div class="container">
+        <p>Picker选择器：</p>
+        <Picker
+        :list="list"
+        placeholder="请选择需要的选项"
+        @input="handleChange"
+        ></Picker>
+    </div>
+</template>

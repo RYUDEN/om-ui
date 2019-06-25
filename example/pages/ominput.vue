@@ -29,6 +29,7 @@ export default {
         title="姓名"
         :error="error"
         max="10"
+        clear
         @require="handleRequire"
         >
         <OMButton size="small" outline><Icon value="send"/>发送</OMButton>

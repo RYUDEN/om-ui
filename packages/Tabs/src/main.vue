@@ -47,18 +47,22 @@ export default {
                     this.current+=1
                 }
             }
+            this.vertical  = ''
         },
         hanldeMove(e){
             this.moveY = e.changedTouches[0].clientY-this.startY;
             this.move = e.changedTouches[0].clientX-this.start;
-            if(this.vertical){
+            if(this.vertical === 'vertical'){
                this.move = 0;
                this.end =  this.start
-            }else {
-                if((this.moveY/this.move)>1.25){
-                    this.vertical = true 
+            }else if(this.vertical === 'standard'){
+                this.move = e.changedTouches[0].clientX-this.start;
+            }
+            else if(Math.abs(this.move)>30||Math.abs(this.moveY)>30) {
+                if(Math.abs(this.moveY/this.move)>1.25){
+                    this.vertical = 'vertical' 
                 }else{
-                    this.move = e.changedTouches[0].clientX-this.start;
+                    this.vertical = 'standard'
                 }
             }
             // if(Math.abs(this.moveY)>Math.abs(e.changedTouches[0].clientX-this.start)&&Math.abs(this.moveY)>50){

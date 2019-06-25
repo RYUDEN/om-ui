@@ -1,0 +1,76 @@
+@import './transition.styl'
+.om-picker-sheet
+    top 0
+    left 0
+    width 100vw
+    height 100vh
+    position fixed 
+    z-index 9999
+    opacity 1
+    &--title
+        position relative
+        height 30px
+        line-height: 30px
+        display: flex 
+        justify-content: space-between
+        padding: 0 .2rem
+    &--title::after
+        border: 0 solid #d6e4ef;
+        transform: scale(.5);
+        border-bottom-width: 1PX;
+        top: -50%;
+        left: -50%;
+        right: -50%;
+        bottom: -50%;
+        content: "";
+        position: absolute;
+        transform-origin: center;
+        box-sizing: border-box;
+        pointer-events: none;
+    &--container
+        width 100%
+        position absolute
+        height 5rem
+        bottom 0
+        z-index: 10001
+        display flex 
+        flex-direction column
+        background-color #f0f7f9
+    &--body 
+        flex 1
+        display: flex 
+        flex-direction: column
+        justify-content: space-around
+        overflow hidden
+    &--preview
+        position relative
+        height 30px 
+        line-height 30px
+        &::after 
+            border: 0 solid #d6e4ef;
+            transform: scale(.5);
+            border-bottom-width: 1PX;
+            border-top-width: 1PX;
+            top: -50%;
+            left: -50%;
+            right: -50%;
+            bottom: -50%;
+            content: "";
+            position: absolute;
+            transform-origin: center;
+            box-sizing: border-box;
+            pointer-events: none;
+    &--list 
+        text-align center
+.slide-enter-active
+    transition:$--all-transition
+    .om-picker-sheet--container
+        transition:$--slide-transition
+.slide-leave-active
+    transition:$--all-transition
+    .om-picker-sheet--container
+        transition:$--all-transition       
+.slide-enter,.slide-leave-to
+    opacity 0
+    .om-picker-sheet--container
+        bottom: -100%

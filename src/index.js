@@ -13,6 +13,9 @@ import {Swiper,SwiperItem} from '../packages/Swiper/index'
 import Divider from '../packages/Divider/index'
 import Input from '../packages/Input/index'
 import Slider from '../packages/Slider/index'
+import OMSwitch from '../packages/Switch/index'
+import Rate from '../packages/Rate/index'
+import Picker from '../packages/Picker/index'
 import {Tabs,Tabpane} from '../packages/Tabs/index'
 
 
@@ -32,7 +35,10 @@ const components = [
     Input,
     Slider,
     Tabs,
-    Tabpane
+    Tabpane,
+    Rate,
+    Picker,
+    OMSwitch
 ]
 const install = function(Vue){
     components.forEach(component=>{
@@ -65,5 +71,8 @@ export default {
     Slider,
     Tabs,
     Tabpane,
+    OMSwitch,
+    Rate,
+    Picker,
     install
 }

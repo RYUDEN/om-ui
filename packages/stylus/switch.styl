@@ -1,0 +1,41 @@
+@import './base'
+.om-switch
+    position relative
+    width 50px
+    height 30px
+    border: 1px solid #dfdfdf;
+    outline: 0;
+    box-sizing: border-box;
+    appearance: none
+    border-radius: 15px
+    display inline-block
+    background-color #dfdfdf
+    &::before 
+        content " "
+        display block 
+        width 48px 
+        height 28px
+        position absolute
+        top 0 
+        left 0
+        background-color #fdfdfd
+        border-radius 14px
+        transition transform .35s cubic-bezier(.45,1,.4,1)
+    &::after 
+        content " "
+        display block 
+        width 28px 
+        height 28px
+        position absolute
+        top 0 
+        left 0
+        background-color #fdfdfd
+        border-radius 14px
+        box-shadow 0 1px 3px rgba(0,0,0,.4)
+        transition: transform .35s cubic-bezier(.4,.4,.25,1.35)
+    &:checked::before
+        transform scale(0)
+    &:checked::after
+        transform translateX(19px)
+    &:checked 
+        background-color $color-success

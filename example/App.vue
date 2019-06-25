@@ -26,4 +26,7 @@ body
     font-size .50rem
 .container
   padding .10rem
+  p
+    font-size .4rem
+    font-weight bold
 </style>

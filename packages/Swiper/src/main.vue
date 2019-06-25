@@ -61,6 +61,9 @@ export default {
             this.start = e.changedTouches[0].clientX;
             this.dura = 0 ;
         },
+        hanldeMove(e){
+            this.move = e.changedTouches[0].clientX-this.start ;
+        },
         handleEnd(e){
             if(this.autoplay){
                 this.autoplayItem()
@@ -82,9 +85,6 @@ export default {
                 }
             }
             this.onChange(this.currentItem)
-        },
-        hanldeMove(e){
-            this.move = e.changedTouches[0].clientX-this.start ;
         },
         handleDot(k){
             this.currentItem = k-1;

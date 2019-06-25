@@ -12,6 +12,7 @@
       <router-link to='curtain' class="link">幕帘</router-link>
       <router-link to='tag' class="link">标签</router-link>
       <router-link to='swiper' class="link">swiper</router-link>
+      <router-link to='tabs' class="link">tabs</router-link>
       <router-link to='divider' class="link">分割线</router-link>
     </div>
     <div class="container index-container">
@@ -24,7 +25,9 @@
     <div class="container index-container">
       <p class="title">表单组件</p>
       <router-link to='ominput' class="link">输入框</router-link>
-
+      <router-link to='Switch' class="link">开关</router-link>
+      <router-link to='rate' class="link">星星评分</router-link>
+      <router-link to='picker' class="link">Picker选择器</router-link>
     </div>
   </div>
 </template>

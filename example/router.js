@@ -19,6 +19,9 @@ const divider = ()=>import('./pages/divider');
 const omInput = ()=>import('./pages/ominput');
 const slider = ()=>import('./pages/slider');
 const tabs = ()=>import('./pages/tabs');
+const pageSwitch = ()=>import('./pages/switch');
+const rate = ()=>import('./pages/rate');
+const picker = ()=>import('./pages/picker');
 
 
 export default new Router({
@@ -101,6 +104,21 @@ export default new Router({
             path:'/tabs',
             name:'tabs',
             component:tabs
+        },
+        {
+            path:'/rate',
+            name:'rate',
+            component:rate
+        },
+        {
+            path:'/picker',
+            name:'picker',
+            component:picker
+        },
+        {
+            path:'/Switch',
+            name:'pageSwitch',
+            component:pageSwitch
         },
     ]
 })
