@@ -116,9 +116,9 @@ export default {
                             <div 
                             :style="{transform:transformY,transition:duration}"
                             class="om-picker-sheet--list"
-                            @touchstart.stop="handleStart"
-                            @touchmove.stop="handleMove"
-                            @touchend.stop="handleEnd"
+                            @touchstart.stop.prevent="handleStart"
+                            @touchmove.stop.prevent="handleMove"
+                            @touchend.stop.prevent="handleEnd"
                             >
                                 <div
                                 v-for="(i,k) in list"
