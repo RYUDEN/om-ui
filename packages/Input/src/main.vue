@@ -31,7 +31,7 @@ export default {
             }
             this.value = e.target.value;
             this.$emit('input',e.target.value);
-            this.$emit('require')
+            this.$emit('require');
         },
         clearInput(){
             this.value = '',

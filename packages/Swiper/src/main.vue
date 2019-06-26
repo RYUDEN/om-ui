@@ -62,7 +62,7 @@ export default {
             this.dura = 0 ;
         },
         hanldeMove(e){
-            this.move = e.changedTouches[0].clientX-this.start ;
+            this.move = e.changedTouches[0].clientX-this.start;
         },
         handleEnd(e){
             if(this.autoplay){
