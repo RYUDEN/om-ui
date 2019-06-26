@@ -96,6 +96,9 @@ export default {
         transformY(k){
             const itemHeight = 30;
             return `translate3d(0,${-((this.index[k]*itemHeight)-this.move[k])}px,0)`
+        },
+        prevent(){
+            
         }
     },
     computed:{
@@ -113,6 +116,7 @@ export default {
         </div>
         <transition name="slide">
             <div class="om-picker-sheet"
+            @touchmove.prevent="prevent"
             v-if="status"
             >
                 <div
