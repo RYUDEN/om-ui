@@ -4,4 +4,3 @@ Picker.install = function(Vue) {
   };
   
 export default Picker;
-  
